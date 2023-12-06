@@ -1,4 +1,4 @@
-const root_url = "http://ec2-18-218-128-249.us-east-2.compute.amazonaws.com:8080/api/grafo";
+const root_url = "https://mapaback-production.up.railway.app/api/grafo";
 
 export const agregarNodoAPI = (nodoData) => {
     return fetch(root_url+"/nodos", {
