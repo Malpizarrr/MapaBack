@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa y Rutas</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #map { height: 400px; }
+        #coordinates { /* Tus estilos... */ }
+        /* Estilos adicionales... */
+    </style>
+</head>
+<body>
+<h1>Mapa y Rutas</h1>
+
+<div id="map"></div>
+<div id="coordinates">
+    <strong>Coordenadas del Cursor:</strong>
+    <div>X: <span id="xCoord">N/A</span></div>
+    <div>Y: <span id="yCoord">N/A</span></div>
+</div>
+
+<h2>Agregar Nodo</h2>
+<form id="nodoForm">
+    <input type="number" id="id" placeholder="ID del nodo" required>
+    <input type="number" id="x" placeholder="Coordenada X" required>
+    <input type="number" id="y" placeholder="Coordenada Y" required>
+    <button onclick="agregarNodo()">Agregar Nodo</button>
+</form>
+
+<h2>Agregar Arista</h2>
+<form id="aristaForm">
+    <label for="inicioId">ID de Origen:</label>
+    <input type="number" id="inicioId" required>
+    <label for="finId">ID de Destino:</label>
+    <input type="number" id="finId" required>
+    <button type="submit">Agregar Arista</button>
+</form>
+
+<h2>Nodos Agregados</h2>
+<table id="nodosList">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Latitud</th>
+        <th>Longitud</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<h2>Aristas Agregadas</h2>
+<table id="aristasList">
+    <thead>
+    <tr>
+        <th>ID de Origen</th>
+        <th>ID de Destino</th>
+        <th>Peso</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<h2>Calcular Ruta Más Corta</h2>
+<form id="rutaForm">
+    <label for="origenId">ID de Origen:</label>
+    <input type="number" id="origenId" required>
+    <label for="destinoId">ID de Destino:</label>
+    <input type="number" id="destinoId" required>
+    <button type="submit">Calcular Ruta</button>
+</form>
+
+<div id="rutaResultados">
+    <!-- Los resultados de la ruta se mostrarán aquí -->
+</div>
+
+
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_3GDS1Y74jlBBUTFYAk8yxKX9u-bDIgo&libraries=geometry&callback=initMap">
+</script>
+
+
+
+
+
+<script src="Front.js"></script>
+</body>
+</html>
